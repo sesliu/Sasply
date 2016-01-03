@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.player.tela.equalizador.EqualizadorController">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="434.0" layoutX="-15.0" layoutY="-17.0" stroke="BLACK" strokeType="INSIDE" width="633.0">
+               <fill>
+                  <RadialGradient centerX="0.4777777777777778" centerY="0.08571428571428572" cycleMethod="REFLECT" focusDistance="-1.0" radius="0.8953488372093024">
+                     <stops>
+                        <Stop color="#253746" />
+                        <Stop color="#243645" offset="0.11632499901252122" />
+                        <Stop color="#243745" offset="0.2577319587628866" />
+                        <Stop color="#27065c" offset="0.8962357309317848" />
+                        <Stop color="#eeeeee" offset="0.9962475806770155" />
+                        <Stop color="#28065e" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <DropShadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Rectangle>
+            <Slider fx:id="sld1" layoutX="61.0" layoutY="89.0" orientation="VERTICAL" prefHeight="223.0" prefWidth="61.0" showTickMarks="true" value="50.0" />
+            <Slider fx:id="sld2" layoutX="122.0" layoutY="89.0" orientation="VERTICAL" prefHeight="223.0" prefWidth="61.0" showTickMarks="true" value="50.0" />
+            <Slider fx:id="sld3" layoutX="183.0" layoutY="89.0" orientation="VERTICAL" prefHeight="223.0" prefWidth="61.0" showTickMarks="true" value="50.0" />
+            <Slider fx:id="sld4" layoutX="244.0" layoutY="89.0" orientation="VERTICAL" prefHeight="223.0" prefWidth="61.0" showTickMarks="true" value="50.0" />
+            <Slider fx:id="sld5" layoutX="305.0" layoutY="89.0" orientation="VERTICAL" prefHeight="223.0" prefWidth="61.0" showTickMarks="true" value="50.0" />
+            <Slider fx:id="sld6" layoutX="366.0" layoutY="89.0" orientation="VERTICAL" prefHeight="223.0" prefWidth="61.0" showTickMarks="true" value="50.0" />
+            <Slider fx:id="sld7" layoutX="427.0" layoutY="89.0" orientation="VERTICAL" prefHeight="223.0" prefWidth="61.0" showTickMarks="true" value="50.0" />
+            <Slider fx:id="sld8" layoutX="488.0" layoutY="89.0" orientation="VERTICAL" prefHeight="223.0" prefWidth="61.0" showTickMarks="true" value="50.0" />
+            <Label layoutX="79.0" layoutY="332.0" text="27" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="140.0" layoutY="332.0" text="45" textFill="#f5efef">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="207.0" layoutY="332.0" text="55" textFill="#eeeded">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="262.0" layoutY="332.0" text="52" textFill="#fcf7f7">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="323.0" layoutY="332.0" text="66" textFill="#f8f4f4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="384.0" layoutY="332.0" text="72" textFill="#f2eded">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="445.0" layoutY="332.0" text="52" textFill="#fffafa">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="506.0" layoutY="332.0" text="35" textFill="#f5f4f4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="61.0" layoutY="35.0" prefHeight="30.0" prefWidth="149.0" text="Equalizador">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#722828" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</StackPane>
