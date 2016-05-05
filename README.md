@@ -1,6 +1,6 @@
 # Sasply version 0.0.6 - Beta 
 
-Sasply means still a simple play.
+Sasply means still a simple player.
 
 a simple player written in JavaFX with playlist support.
 
