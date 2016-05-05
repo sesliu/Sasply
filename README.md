@@ -4,7 +4,7 @@ Sasply means still a simple player.
 
 a simple player written in JavaFX with playlist support.
 
-You can play your favorite songs and salve personalitty playlist to play after. 
+You can play your favorite songs and salve personal playlist to play after. 
 It is supporting lyrics, but I will improve this feature.
 
 This project is continuous. I will want to implement other features as play videos and streaming.
