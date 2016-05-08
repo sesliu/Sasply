@@ -44,7 +44,7 @@ public class TelaPlayer extends Application {
 	        telaprincipal.setResizable(false);
                scene.setFill(Color.TRANSPARENT);
 
-               telaprincipal.setTitle("Zeta player 0.6");
+               telaprincipal.setTitle("Sasply 0.6");
                telaprincipal.sizeToScene();        
 	       telaprincipal.show();
                    

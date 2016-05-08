@@ -105,9 +105,6 @@ public class TelaPlayerControler implements Initializable{
     private Button btnStop;
     
     @FXML
-    private Button btnMute;
-    
-    @FXML
     private Label lblMusica;
     
     @FXML
@@ -130,9 +127,6 @@ public class TelaPlayerControler implements Initializable{
     @FXML
     private Rectangle rectPrincipal;
 
-   @FXML
-    private ToggleButton btnEq;   
-     
     @FXML
     private ListView<String> llstPlaylist = new ListView<>() ;
     @FXML
@@ -144,17 +138,9 @@ public class TelaPlayerControler implements Initializable{
     private Button btnCarregar;
      @FXML
     private Button btnAdicionar;  
-     @FXML
-    private Circle crcPlay;
+   
     @FXML
     private Label lblPlaylist;
-    
-    
-    @FXML
-    private Circle crcStop;
-    
-    @FXML
-    private Circle crcMute;
     
     @FXML
     private Label lblArtista;
@@ -192,15 +178,10 @@ public class TelaPlayerControler implements Initializable{
     
     @FXML
     private AmbientLight ambStop;
+   
     @FXML
-    private ToggleButton btnLetra;
-     @FXML
     private TextArea txtLetra;
     
-   @FXML
-    private Label lblLetraMsg;
- 
-   
     @FXML
     private Button btnMinimizar;
    
@@ -362,7 +343,7 @@ elapsedSeconds);
  
  private void logo()
  {
-      lblZeta.setVisible(true);
+     lblZeta.setVisible(true);
      TranslateTransition transition = new TranslateTransition(Duration.seconds(1.90));
       RotateTransition rodar = new RotateTransition(Duration.millis(3000), lblZeta);
      rodar.setByAngle(360);
@@ -370,8 +351,8 @@ elapsedSeconds);
      rodar.setAutoReverse(true);
      rodar.play();
      
-     transition.setNode(lblZeta);
-  transition.setFromY(-100);
+  transition.setNode(lblZeta);
+  transition.setFromY(-10);
   transition.setToY(0);
     
       transition.play();
@@ -503,14 +484,7 @@ Task<Void> playlist = new Task<Void> ()
                                }
                                
                                                      
-                        if(mediaPlayer == null)
-                        {
-                             btnLetra.setDisable(true);
-                        }
-                         else
-                        {
-                             btnLetra.setDisable(false);
-                        }
+                       
                        
                                                 
                         if(mediaPlayer != null)
@@ -769,10 +743,8 @@ private void inicializar()
      lblAno.setVisible(false);
      lblAnoMsg.setVisible(false);
      lblalbumMsg.setVisible(false);
-    lblNomeAlbum.setVisible(false);
-    imgCapa.setVisible(false);
-    lblLetraMsg.setVisible(false);
-     btnLetra.setDisable(true);
+     lblNomeAlbum.setVisible(false);
+     imgCapa.setVisible(false);
      sldMusica.setVisible(false);
 
       sldMusica.setValue(0.0);
@@ -784,7 +756,7 @@ private void inicializar()
      
     
 
-      homeZeta = System.getProperty("user.home")+"/Documents/Zeta Player/"; 
+      homeZeta = System.getProperty("user.home")+"/Documents/Sasply/"; 
       plsZeta = new File(homeZeta);
       plsZeta.mkdir();
       
@@ -819,14 +791,14 @@ private void inicializar()
      btnAbrir.setGraphic(new ImageView(abrir));
      btnPlaylist.setGraphic(new ImageView(lista));
      btnLimpar.setGraphic(new ImageView(excluir));
-     lblVolume.setGraphic(new ImageView(medio));
+     //lblVolume.setGraphic(new ImageView(medio));
     
      llstPlaylist.getStyleClass().add("list-cell");
     
     btnLimpar.setDisable(true);
     
     
-    playlistExpandido();
+   // playlistExpandido();
     
     
 }
@@ -898,7 +870,6 @@ private void inicializar()
             imgCapa.setVisible(false);
             txtLetra.setText("");
              btnPlay.setGraphic(new ImageView(play));
-             lblLetraMsg.setVisible(false);
             sldMusica.setVisible(false);
             sldMusica.setValue(0.0);
             btnExibirLetra.setStyle("-fx-background-color: white");
@@ -1058,9 +1029,7 @@ private void inicializar()
          public void handle(MouseEvent event) {
              
               btnPlay.setScaleX(1.1);
-             crcPlay.setScaleX(1.1);
-             crcPlay.setScaleY(1.1);
-             btnPlay.setScaleY(1.1);
+              btnPlay.setScaleY(1.1);
          }
      });
       
@@ -1068,10 +1037,10 @@ private void inicializar()
 
          @Override
          public void handle(MouseEvent event) {
-              btnPlay.setScaleX(1.0);
+             
+             btnPlay.setScaleX(1.0);
              btnPlay.setScaleY(1.0);
-               crcPlay.setScaleX(1.0);
-              crcPlay.setScaleY(1.0);
+              
          }
      });
     btnNext.setOnMouseEntered(new EventHandler<MouseEvent>() {
@@ -1113,27 +1082,7 @@ private void inicializar()
      
      
      
-       btnMute.setOnMouseEntered(new EventHandler<MouseEvent>() {
-
-         @Override
-         public void handle(MouseEvent event) {
-            btnMute.setScaleX(1.2);
-             btnMute.setScaleY(1.2);
-            crcMute.setScaleX(1.2);
-              crcMute.setScaleY(1.2); 
-         }
-     });
-     
-     btnMute.setOnMouseExited(new EventHandler<MouseEvent>() {
-
-         @Override
-         public void handle(MouseEvent event) {
-            btnMute.setScaleX(1.0);
-            btnMute.setScaleY(1.0);
-             crcMute.setScaleX(1.0);
-              crcMute.setScaleY(1.0);
-         }
-     });
+       
      
        btnStop.setOnMouseEntered(new EventHandler<MouseEvent>() {
 
@@ -1144,10 +1093,6 @@ private void inicializar()
             
              btnStop.setScaleX(1.2);
              btnStop.setScaleY(1.2);
-             crcStop.setScaleX(1.2);
-              crcStop.setScaleY(1.2);
-              
-          
               
          }
      });
@@ -1160,8 +1105,7 @@ private void inicializar()
          public void handle(MouseEvent event) {
             btnStop.setScaleX(1.0);
             btnStop.setScaleY(1.0);
-            crcStop.setScaleX(1.0);
-            crcStop.setScaleY(1.0);
+            
            
             
          }
@@ -1406,26 +1350,7 @@ private void inicializar()
 //         }
 //     });
          
-     btnMute.setOnAction(new EventHandler<ActionEvent>() {
-
-         @Override
-         public void handle(ActionEvent event) {
-             if(mediaPlayer.isMute() == false)
-             {
-                 mediaPlayer.setMute(true);
-                  lblStatus.setText(" )))Mute(((");
-                 
-             }
-             else{
-                 mediaPlayer.setMute(false);
-                  lblStatus.setText("Tocando");
-                  
-                  
-             }
-             
-         }
-     });
-     
+   
      
      this.btnNext.setOnMouseClicked( new EventHandler<MouseEvent>() {
 
@@ -1994,78 +1919,6 @@ private void inicializar()
      
      
      
-     btnLetra.setOnAction(new EventHandler<ActionEvent>() {
-
-         @Override
-         public synchronized void handle(ActionEvent event) {
-            
-                 if(mediaPlayer != null)
-                    {  
-                 
-                            btnLetra.setCursor(Cursor.WAIT);
-                            Letra letra = new Letra();
-                            List <String> lista = null;
-                
-                
-                        try {
-                            lista = letra.getLetra(media.getMetadata().get("artist").toString(),media.getMetadata().get("title").toString());
-                            txtLetra.setText(lista.toString());
-                            btnExibirLetra.requestFocus();
-                            btnExibirLetra.setStyle("-fx-background-color: yellow");
-                           
-                    
-                             } catch ( NullPointerException e) {
-                                Logger.getLogger(TelaPlayerControler.class.getName()).log(Level.SEVERE, null, e);
-                            lblLetraMsg.setVisible(true);
-                            btnExibirLetra.setStyle("-fx-background-color: white");
-                            playlistExpandido();
-                            
-                        } catch (IOException ex) {
-                        Logger.getLogger(TelaPlayerControler.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    
-                            if(lista == null || media == null)
-                            {
-                                lblLetraMsg.setVisible(true);
-                            if(txtLetra.getText().length() > 0 )
-                            {
-                                txtLetra.setText("");
-                                btnExibirLetra.setStyle("-fx-background-color: white");
-                                playlistExpandido();
-                                
-                            }
-                        }
-                        else{
-                                 lblLetraMsg.setVisible(false);
-                                  btnExibirLetra.setStyle("-fx-background-color: yellow");
-                                  
-                            }
-                            btnLetra.setCursor(Cursor.DEFAULT);
-                        }
-                        }
-                                
-               
-         
-     });
-     
-     btnEq.setOnAction(new EventHandler<ActionEvent>() {
-
-         @Override
-         public void handle(ActionEvent event) {
-            Equalizador equalizador = new Equalizador();
-            Stage estado  = new Stage();
-             try {
-                 equalizador.start(estado);
-             } catch (Exception ex) {
-                 Logger.getLogger(TelaPlayerControler.class.getName()).log(Level.SEVERE, null, ex);
-             }
-            
-             
-         }
-     });
-     
-     
-     
      
    stackTela.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
@@ -2150,7 +2003,8 @@ private void inicializar()
                btnFechar.setScaleY(1.3);
                Tooltip tooltip = new Tooltip();
                tooltip.setText("Fechar");
-             btnFechar.setTooltip(tooltip);
+               btnFechar.setTooltip(tooltip);
+              btnMinimizar.setText("X");
                
              
          }

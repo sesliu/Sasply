@@ -1,51 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.shape.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.AmbientLight?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<StackPane fx:id="stackTela" prefHeight="585.0" prefWidth="966.0" style="-fx-background-radius: 4em; -fx-border-radius: 4em;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.player.tela.TelaPlayerControler">
+<StackPane fx:id="stackTela" prefHeight="585.0" prefWidth="966.0" style="-fx-background-radius: 4em; -fx-border-radius: 4em;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.player.tela.TelaPlayerControler">
    <children>
       <Pane fx:id="pnePrincipal" blendMode="SRC_ATOP" cacheHint="SCALE_AND_ROTATE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="971.0" style="-fx-background-radius: 2em; -fx-border-radius: 2em;">
          <children>
-            <Rectangle arcHeight="2.0" arcWidth="2.0" blendMode="SCREEN" height="632.0" layoutX="-13.0" layoutY="-5.0" stroke="BLACK" strokeLineCap="BUTT" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-arc-height: 8; -fx-arc-width: 8;" width="994.0">
+            <Rectangle arcHeight="2.0" arcWidth="2.0" blendMode="SCREEN" fill="WHITE" height="632.0" layoutX="5.0" layoutY="-12.0" stroke="BLACK" strokeLineCap="BUTT" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-arc-height: 8; -fx-arc-width: 8;" width="994.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="607.0" layoutX="1.0" opacity="0.4" stroke="BLACK" strokeType="INSIDE" width="90.0">
                <fill>
-                  <RadialGradient centerX="0.31666666666666676" centerY="0.819047619047619" cycleMethod="REFLECT" focusAngle="-90.0" focusDistance="1.0" radius="0.5">
+                  <LinearGradient endX="1.0" endY="1.0">
                      <stops>
-                        <Stop color="#07114d" />
-                        <Stop color="#1029b5" offset="0.007662835249042145" />
-                        <Stop color="#2a0f75" offset="0.007662835249042145" />
-                        <Stop color="#07114d" offset="0.04980842911877394" />
-                        <Stop color="#260f66" offset="0.7779357743808507" />
-                        <Stop color="#260e66" offset="0.8773946360153254" />
-                        <Stop color="#5a0ab5" offset="1.0" />
-                     </stops>
-                  </RadialGradient>
-               </fill>
-            </Rectangle>
-            <Circle fx:id="crcStop" layoutX="76.0" layoutY="428.0" radius="42.0" smooth="false" stroke="#45066f" strokeLineJoin="ROUND" strokeMiterLimit="0.0" strokeWidth="0.0">
-               <fill>
-                  <LinearGradient endX="1.0" endY="0.14761904761904762" startX="0.5238095238095237" startY="0.5380952380952381">
-                     <stops>
-                        <Stop color="#245079" />
-                        <Stop color="#eeeeee" offset="0.9962475806770155" />
-                        <Stop color="#1b74cd" offset="1.0" />
+                        <Stop color="BLACK" />
+                        <Stop color="DODGERBLUE" offset="1.0" />
                      </stops>
                   </LinearGradient>
                </fill>
-            </Circle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="91.0" layoutY="513.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 80; -fx-arc-width: 80;" width="443.0">
+            </Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="71.0" layoutX="-12.0" layoutY="542.0" opacity="0.49" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1000.0">
                <fill>
                   <LinearGradient endX="1.0" endY="0.7619047619047619" startX="0.9380952380952381">
                      <stops>
                         <Stop color="#0973d7" />
-                        <Stop color="WHITE" offset="1.0" />
+                        <Stop color="DODGERBLUE" offset="1.0" />
                      </stops>
                   </LinearGradient>
                </fill>
@@ -53,156 +50,23 @@
                   <DropShadow color="#750909" height="160.36" radius="44.84" />
                </effect>
             </Rectangle>
-            <Circle fx:id="crcPlay" layoutX="311.0" layoutY="536.0" radius="56.0" smooth="false" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="0.0" strokeType="OUTSIDE" strokeWidth="0.0">
-               <fill>
-                  <LinearGradient endX="1.0" endY="0.11904761904761907" startX="0.8952380952380952" startY="0.40476190476190477">
-                     <stops>
-                        <Stop color="#0a5ca8" />
-                        <Stop color="WHITE" offset="1.0" />
-                     </stops>
-                  </LinearGradient>
-               </fill>
-               <effect>
-                  <DropShadow height="121.81" radius="71.525" width="166.29" />
-               </effect>
-            </Circle>
-            <Button fx:id="btnPlay" layoutX="266.0" layoutY="491.0" mnemonicParsing="false" style="-fx-max-height: 90; -fx-background-radius: 6em; -fx-max-width: 90; -fx-min-height: 90; -fx-min-width: 90; -fx-cursor: hand;">
-               <font>
-                  <Font name="System Bold" size="41.0" />
-               </font>
-               <effect>
-                  <InnerShadow />
-               </effect>
-            </Button>
-            <Button fx:id="btnNext" layoutX="385.0" layoutY="524.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" style="-fx-background-radius: 12em; -fx-cursor: hand;">
-               <effect>
-                  <DropShadow radius="24.825" width="80.3" />
-               </effect></Button>
-            <Button fx:id="btnBack" layoutX="183.0" layoutY="524.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" style="-fx-background-radius: 12em; -fx-cursor: hand;">
-               <effect>
-                  <DropShadow radius="30.755" width="104.02" />
-               </effect></Button>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a0e1bb" height="265.0" layoutX="107.0" layoutY="99.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" style="-fx-arc-height: 30; -fx-arc-width: 30;" width="416.0">
-               <effect>
-                  <InnerShadow choke="0.43" height="62.27" radius="78.8175" width="255.0" />
-               </effect>
-            </Rectangle>
-            <Label fx:id="lblContador" layoutX="263.0" layoutY="215.0" prefHeight="65.0" prefWidth="191.0" textOverrun="WORD_ELLIPSIS">
-               <font>
-                  <Font size="44.0" />
-               </font>
-               <effect>
-                  <DropShadow />
-               </effect>
-            </Label>
-            <Label fx:id="lblMusica" layoutX="183.0" layoutY="112.0" prefHeight="27.0" prefWidth="255.0" wrapText="true">
-               <font>
-                  <Font size="18.0" />
-               </font>
-               <effect>
-                  <DropShadow />
-               </effect>
-            </Label>
-            <Button fx:id="btnAbrir" layoutX="108.0" layoutY="50.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" style="-fx-background-radius: 12em; -fx-cursor: hand;">
-               <effect>
-                  <InnerShadow radius="21.86" width="68.44" />
-               </effect></Button>
-            <Button fx:id="btnPlaylist" layoutX="286.0" layoutY="50.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" style="-fx-background-radius: 12em; -fx-cursor: hand;">
-               <effect>
-                  <InnerShadow height="61.76" radius="31.67" width="66.92" />
-               </effect></Button>
-            <Button fx:id="btnLimpar" layoutX="458.0" layoutY="50.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" style="-fx-background-radius: 12em; -fx-cursor: hand;">
-               <effect>
-                  <InnerShadow radius="21.86" width="68.44" />
-               </effect></Button>
-            <Label fx:id="lblStatus" layoutX="292.0" layoutY="339.0" text="Label">
-               <effect>
-                  <DropShadow />
-               </effect>
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <Label fx:id="lblTempoMsg" layoutX="370.0" layoutY="182.0" text="Tempo Total">
-               <effect>
-                  <DropShadow />
-               </effect>
-            </Label>
-            <Button fx:id="btnStop" layoutX="47.0" layoutY="397.0" mnemonicParsing="false" style="-fx-max-height: 60; -fx-max-width: 60; -fx-min-height: 60; -fx-min-width: 60; -fx-background-radius: 12em; -fx-cursor: hand;">
-               <effect>
-                  <InnerShadow blurType="GAUSSIAN" choke="0.15" color="#e10c0c" height="127.75" radius="42.6175" width="44.72" />
-               </effect>
-            </Button>
-            <Label fx:id="lblTempo" layoutX="463.0" layoutY="182.0" text="0:00">
-               <effect>
-                  <DropShadow />
-               </effect>
-            </Label>
             <Label fx:id="lblVolume" layoutX="488.0" layoutY="533.0" prefHeight="20.0" prefWidth="28.0" />
-            <Label fx:id="lblMax" layoutX="495.0" layoutY="504.0" prefHeight="29.0" prefWidth="28.0" style="-fx-cursor: hand;" text="+">
+            <Label fx:id="lblMax" layoutX="415.0" layoutY="56.0" prefHeight="29.0" prefWidth="28.0" style="-fx-cursor: hand;" text="+" visible="false">
                <font>
                   <Font name="Times New Roman" size="25.0" />
                </font>
             </Label>
-            <Label fx:id="lblMin" layoutX="496.0" layoutY="550.0" prefHeight="29.0" prefWidth="28.0" style="-fx-cursor: hand;" text="-">
+            <Label fx:id="lblMin" layoutX="389.0" layoutY="55.0" prefHeight="29.0" prefWidth="28.0" style="-fx-cursor: hand;" text="-" visible="false">
                <font>
                   <Font name="Times New Roman Bold" size="27.0" />
                </font>
             </Label>
-            <Circle fx:id="crcMute" layoutX="581.0" layoutY="422.0" radius="42.0" smooth="false" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0">
-               <fill>
-                  <LinearGradient endX="1.0" endY="0.14761904761904762" startX="0.5238095238095237" startY="0.5380952380952381">
-                     <stops>
-                        <Stop color="#245079" />
-                        <Stop color="#eeeeee" offset="0.9962475806770155" />
-                        <Stop color="#1b74cd" offset="1.0" />
-                     </stops>
-                  </LinearGradient>
-               </fill>
-            </Circle>
-            <Button fx:id="btnMute" layoutX="551.0" layoutY="391.0" mnemonicParsing="false" style="-fx-max-height: 60; -fx-max-width: 60; -fx-min-height: 60; -fx-min-width: 60; -fx-background-radius: 12em; -fx-cursor: hand;" text="Mute">
-               <effect>
-                  <InnerShadow blurType="TWO_PASS_BOX" choke="0.15" color="#3533a8" height="65.48" radius="27.05" width="44.72" />
-               </effect>
-               <textFill>
-                  <LinearGradient endX="1.0" endY="1.0">
-                     <stops>
-                        <Stop color="#597abc" />
-                        <Stop color="#430707" offset="1.0" />
-                     </stops>
-                  </LinearGradient>
-               </textFill>
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Button>
-            <Label fx:id="lblZeta" layoutX="223.0" layoutY="190.0" prefHeight="84.0" prefWidth="180.0" text="Zeta Player v 0.6">
-               <font>
-                  <Font name="Times New Roman Bold" size="23.0" />
-               </font>
-               <textFill>
-                  <LinearGradient endX="1.0" endY="1.0" startY="0.22380952380952382">
-                     <stops>
-                        <Stop color="#0f0746" />
-                        <Stop color="#e14e4e" offset="1.0" />
-                     </stops>
-                  </LinearGradient>
-               </textFill>
-               <effect>
-                  <DropShadow blurType="ONE_PASS_BOX" />
-               </effect>
-            </Label>
-            <Label fx:id="lblArtista" layoutX="134.0" layoutY="138.0" text="Artista">
+            <Label fx:id="lblArtista" layoutX="192.0" layoutY="453.0" text="Artista">
                <effect>
                   <DropShadow radius="62.63" width="231.52" />
                </effect>
             </Label>
-            <Label fx:id="lblNomeArtista" layoutX="183.0" layoutY="134.0" prefHeight="17.0" prefWidth="180.0">
-               <effect>
-                  <DropShadow />
-               </effect>
-            </Label>
-            <Label fx:id="lblMusicaMsg" layoutX="134.0" layoutY="117.0" text="Música">
+            <Label fx:id="lblMusicaMsg" layoutX="191.0" layoutY="431.0" text="Música">
                <effect>
                   <DropShadow radius="57.4425" width="210.77" />
                </effect>
@@ -210,53 +74,22 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="lblAnoMsg" layoutX="134.0" layoutY="157.0" text="Ano">
+            <Label fx:id="lblAnoMsg" layoutX="194.0" layoutY="475.0" text="Ano">
                <effect>
                   <DropShadow />
                </effect>
             </Label>
-            <Label fx:id="lblAno" layoutX="183.0" layoutY="157.0" prefHeight="17.0" prefWidth="45.0">
+            <Label fx:id="lblalbumMsg" layoutX="193.0" layoutY="503.0" text="Album">
                <effect>
                   <DropShadow />
                </effect>
             </Label>
-            <Label fx:id="lblalbumMsg" layoutX="134.0" layoutY="182.0" text="Album">
-               <effect>
-                  <DropShadow />
-               </effect>
-            </Label>
-            <Label fx:id="lblNomeAlbum" layoutX="183.0" layoutY="182.0" prefHeight="17.0" prefWidth="180.0">
-               <effect>
-                  <DropShadow />
-               </effect>
-            </Label>
-            <ImageView fx:id="imgCapa" fitHeight="78.0" fitWidth="90.0" layoutX="119.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
-               <effect>
-                  <Reflection />
-               </effect>
-            </ImageView>
-            <ToggleButton fx:id="btnLetra" layoutX="134.0" layoutY="449.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="67.0" style="-fx-background-radius: 12em; -fx-cursor: hand;" text="Letra">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-               <textFill>
-                  <LinearGradient endX="1.0" endY="0.5666666666666667" startX="0.5952380952380952">
-                     <stops>
-                        <Stop color="#e10606" />
-                        <Stop color="#401f1f" offset="1.0" />
-                     </stops>
-                  </LinearGradient>
-               </textFill>
-               <effect>
-                  <InnerShadow radius="30.015" width="101.06" />
-               </effect>
-            </ToggleButton>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="560.0" layoutX="663.0" layoutY="37.0" opacity="0.37" stroke="BLACK" strokeLineJoin="ROUND" strokeMiterLimit="0.0" strokeWidth="0.0" style="-fx-arc-height: 8em; -fx-arc-width: 9em;" width="287.0">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="607.0" layoutX="-63.0" opacity="0.37" stroke="BLACK" strokeLineJoin="ROUND" strokeMiterLimit="0.0" strokeWidth="0.0" style="-fx-arc-height: 8em; -fx-arc-width: 9em;" width="1044.0">
                <fill>
                   <RadialGradient centerX="0.23333333333333334" centerY="0.5" cycleMethod="REFLECT" focusAngle="-164.05" focusDistance="-0.18604651162790686" radius="0.5116279069767442">
                      <stops>
                         <Stop color="#069ed1" />
-                        <Stop color="#500386" offset="1.0" />
+                        <Stop color="#43514c" offset="1.0" />
                      </stops>
                   </RadialGradient>
                </fill>
@@ -268,23 +101,7 @@
                   </Lighting>
                </effect>
             </Rectangle>
-            <ToggleButton fx:id="btnEq" disable="true" layoutX="451.0" layoutY="449.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="67.0" style="-fx-background-radius: 12em; -fx-cursor: hand;" text="EQ">
-               <textFill>
-                  <LinearGradient endX="1.0" endY="0.5666666666666667" startX="0.5952380952380952">
-                     <stops>
-                        <Stop color="#e10606" />
-                        <Stop color="#401f1f" offset="1.0" />
-                     </stops>
-                  </LinearGradient>
-               </textFill>
-               <font>
-                  <Font name="System Bold" size="20.0" />
-               </font>
-               <effect>
-                  <InnerShadow radius="30.755" width="104.02" />
-               </effect>
-            </ToggleButton>
-            <TextArea fx:id="txtLetra" editable="false" layoutX="715.0" layoutY="313.0" prefHeight="211.0" prefWidth="215.0" style="-fx-background-color: #a0e1bb; -fx-background-radius: 8em;" wrapText="true">
+            <TextArea fx:id="txtLetra" editable="false" layoutX="348.0" layoutY="16.0" prefHeight="56.0" prefWidth="215.0" style="-fx-background-color: #a0e1bb; -fx-background-radius: 8em;" visible="false" wrapText="true">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -292,95 +109,31 @@
                   <InnerShadow choke="0.56" height="59.54" radius="19.634999999999998" />
                </effect>
             </TextArea>
-            <Label fx:id="lblLetraMsg" layoutX="212.0" layoutY="430.0" text="Sem letra para exibir">
-               <textFill>
-                  <LinearGradient endX="1.0" endY="1.0">
-                     <stops>
-                        <Stop color="#7c3030" />
-                        <Stop color="WHITE" offset="1.0" />
-                     </stops>
-                  </LinearGradient>
-               </textFill>
-               <font>
-                  <Font name="System Bold" size="22.0" />
-               </font>
-               <effect>
-                  <Lighting diffuseConstant="1.35" specularConstant="1.07" specularExponent="32.56" surfaceScale="0.45">
-                     <bumpInput>
-                        <Shadow />
-                     </bumpInput>
-                     <light>
-                        <Light.Distant color="#e3ffdf" />
-                     </light>
-                  </Lighting>
-               </effect>
-            </Label>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="20.0" layoutX="101.0" layoutY="371.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 12em; -fx-arc-width: 12em;" width="425.0">
-               <fill>
-                  <RadialGradient centerX="0.23333333333333334" centerY="0.5" cycleMethod="REFLECT" focusAngle="-164.05" focusDistance="-0.18604651162790686" radius="0.5116279069767442">
-                     <stops>
-                        <Stop color="#069ed1" />
-                        <Stop color="#500386" offset="1.0" />
-                     </stops>
-                  </RadialGradient>
-               </fill>
-               <effect>
-                  <DropShadow />
-               </effect>
-            </Rectangle>
-            <ListView fx:id="llstPlaylist" focusTraversable="false" layoutX="716.0" layoutY="96.0" prefHeight="203.0" prefWidth="215.0" style="-fx-cursor: hand; -fx-background-color: #a0e1bb; -fx-background-radius: 2em;">
-               <effect>
-                  <InnerShadow choke="0.34" height="52.02" radius="22.1425" width="38.55" />
-               </effect>
-            </ListView>
-            <ToolBar fx:id="toolPlaylist" layoutX="675.0" layoutY="133.0" orientation="VERTICAL" prefHeight="130.0" prefWidth="35.0" style="-fx-background-color: lightblue;">
+            <ToolBar fx:id="toolPlaylist" layoutX="145.0" layoutY="185.0" orientation="VERTICAL" prefHeight="113.0" prefWidth="40.0" style="-fx-background-color: lightblue;">
               <items>
-                <Button fx:id="btnAdicionar" mnemonicParsing="false" style="-fx-cursor: hand;" text="+" />
-                  <Button fx:id="btnRemover" maxWidth="25.0" minWidth="25.0" mnemonicParsing="false" style="-fx-cursor: hand;" text="-" />
-                  <Button fx:id="btnSalvar" maxWidth="25.0" minWidth="25.0" mnemonicParsing="false" style="-fx-cursor: hand;" text="S" />
-                  <Button fx:id="btnCarregar" maxWidth="25.0" minWidth="25.0" mnemonicParsing="false" style="-fx-cursor: hand;" text="C" />
+                <Button fx:id="btnAdicionar" mnemonicParsing="false" style="-fx-cursor: hand;" text="+">
+                     <font>
+                        <Font size="11.0" />
+                     </font></Button>
+                  <Button fx:id="btnRemover" maxWidth="25.0" minWidth="25.0" mnemonicParsing="false" style="-fx-cursor: hand;" text="-">
+                     <font>
+                        <Font size="10.0" />
+                     </font></Button>
+                  <Button fx:id="btnSalvar" maxWidth="25.0" minWidth="25.0" mnemonicParsing="false" style="-fx-cursor: hand;" text="S">
+                     <font>
+                        <Font size="10.0" />
+                     </font></Button>
+                  <Button fx:id="btnCarregar" maxWidth="25.0" minWidth="25.0" mnemonicParsing="false" style="-fx-cursor: hand;" text="C">
+                     <font>
+                        <Font size="10.0" />
+                     </font></Button>
               </items>
                <effect>
                   <InnerShadow />
                </effect>
             </ToolBar>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a0e1bb" height="30.0" layoutX="727.0" layoutY="54.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 14; -fx-arc-width: 14;" width="201.0">
-               <effect>
-                  <InnerShadow choke="0.33" height="53.62" radius="32.24" width="77.34" />
-               </effect>
-            </Rectangle>
-            <Label fx:id="lblPlaylist" layoutX="752.0" layoutY="62.0" prefHeight="17.0" prefWidth="174.0" text="Label">
-               <effect>
-                  <DropShadow />
-               </effect>
-            </Label>
-            <Slider fx:id="sldMusica" blockIncrement="1.0" layoutX="117.0" layoutY="373.0" majorTickUnit="1.0" minorTickCount="0" prefHeight="14.0" prefWidth="397.0" style="-fx-cursor: hand;">
-               <effect>
-                  <DropShadow height="0.0" radius="60.345" spread="0.71" width="243.38">
-                     <input>
-                        <InnerShadow />
-                     </input></DropShadow>
-               </effect></Slider>
             <AmbientLight fx:id="luzTela" color="CHARTREUSE" layoutX="291.0" layoutY="121.0" lightOn="true" />
-            <Button fx:id="btnMinimizar" layoutX="873.0" layoutY="4.0" maxHeight="39.0" maxWidth="45.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" style="-fx-background-radius: 12em; -fx-background-color: yellow; -fx-max-height: 20; -fx-max-width: 20; -fx-min-height: 20; -fx-min-width: 20;">
-               <effect>
-                  <DropShadow height="62.51" radius="20.377499999999998" spread="0.36">
-                     <input>
-                        <InnerShadow choke="0.29" height="9.14" width="32.86" />
-                     </input>
-                  </DropShadow>
-               </effect>
-            </Button>
-            <Button fx:id="btnFechar" layoutX="906.0" layoutY="4.0" maxHeight="39.0" maxWidth="45.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" style="-fx-background-radius: 12em; -fx-background-color: red; -fx-max-height: 20; -fx-max-width: 20; -fx-min-height: 20; -fx-min-width: 20;">
-               <effect>
-                  <DropShadow height="62.51" radius="20.377499999999998" spread="0.36">
-                     <input>
-                        <InnerShadow choke="0.29" height="9.14" width="32.86" />
-                     </input>
-                  </DropShadow>
-               </effect>
-            </Button>
-            <Button fx:id="btnExibirLetra" layoutX="748.0" layoutY="532.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="152.0" style="-fx-background-radius: 12em; -fx-cursor: hand; -fx-background-color: white;" text="Exibir Letra">
+            <Button fx:id="btnExibirLetra" layoutX="380.0" layoutY="93.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="152.0" style="-fx-background-radius: 12em; -fx-cursor: hand; -fx-background-color: white;" text="Exibir Letra" visible="false">
                <textFill>
                   <LinearGradient endX="1.0" endY="0.5666666666666667" startX="0.5952380952380952">
                      <stops>
@@ -396,10 +149,198 @@
                   <InnerShadow height="59.55" radius="36.6875" width="89.2" />
                </effect>
             </Button>
+            <ImageView fx:id="imgCapa" fitHeight="84.0" fitWidth="77.0" layoutX="104.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
+               <effect>
+                  <Reflection />
+               </effect>
+            </ImageView>
+            <Label fx:id="lblMusica" layoutX="247.0" layoutY="425.0" prefHeight="27.0" prefWidth="255.0" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="lblNomeArtista" layoutX="247.0" layoutY="453.0" prefHeight="17.0" prefWidth="180.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="lblAno" layoutX="247.0" layoutY="475.0" prefHeight="17.0" prefWidth="45.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="lblNomeAlbum" layoutX="247.0" layoutY="503.0" prefHeight="17.0" prefWidth="180.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Button fx:id="btnLimpar" layoutX="26.0" layoutY="133.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" style="-fx-background-radius: 3em; -fx-cursor: hand;">
+               <effect>
+                  <InnerShadow radius="21.86" width="68.44" />
+               </effect></Button>
+            <Button fx:id="btnPlaylist" layoutX="26.0" layoutY="85.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" style="-fx-background-radius: 3em; -fx-cursor: hand;">
+               <effect>
+                  <InnerShadow height="61.76" radius="31.67" width="66.92" />
+               </effect></Button>
+            <Button fx:id="btnBack" layoutX="354.0" layoutY="561.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" style="-fx-background-radius: 12em; -fx-cursor: hand;">
+               <effect>
+                  <DropShadow radius="30.755" width="104.02" />
+               </effect></Button>
+            <Button fx:id="btnPlay" layoutX="431.0" layoutY="549.0" minHeight="60.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="90.0" style="-fx-max-height: 50; -fx-background-radius: 6em; -fx-max-width: 50; -fx-min-height: 40; -fx-min-width: 40; -fx-cursor: hand;">
+               <font>
+                  <Font name="System Bold" size="41.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="btnNext" layoutX="502.0" layoutY="560.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" style="-fx-background-radius: 12em; -fx-cursor: hand;">
+               <effect>
+                  <DropShadow radius="24.825" width="80.3" />
+               </effect></Button>
+            <Separator layoutX="91.0" layoutY="396.0" prefHeight="1.0" prefWidth="786.0">
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </DropShadow>
+               </effect>
+            </Separator>
+            <Separator layoutX="90.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="545.0" prefWidth="1.0">
+               <effect>
+                  <InnerShadow>
+                     <input>
+                        <DropShadow />
+                     </input>
+                  </InnerShadow>
+               </effect>
+            </Separator>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="607.0" layoutX="876.0" opacity="0.4" stroke="BLACK" strokeType="INSIDE" width="98.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="DODGERBLUE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Button fx:id="btnStop" layoutX="270.0" layoutY="552.0" mnemonicParsing="false" style="-fx-max-height: 45; -fx-max-width: 45; -fx-min-height: 45; -fx-min-width: 45; -fx-background-radius: 12em; -fx-cursor: hand;">
+               <effect>
+                  <InnerShadow choke="0.05" color="#fc0808" height="52.88" radius="52.1225" width="157.61" />
+               </effect>
+            </Button>
+            <Button fx:id="btnFechar" layoutX="925.0" layoutY="17.0" maxHeight="39.0" maxWidth="45.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" style="-fx-background-radius: 12em; -fx-background-color: red; -fx-max-height: 20; -fx-max-width: 20; -fx-min-height: 20; -fx-min-width: 20;">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Separator layoutX="875.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="545.0" prefWidth="1.0">
+               <effect>
+                  <InnerShadow>
+                     <input>
+                        <DropShadow />
+                     </input>
+                  </InnerShadow>
+               </effect>
+            </Separator>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a0e1bb" height="30.0" layoutX="359.0" layoutY="78.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 14; -fx-arc-width: 14;" width="286.0">
+               <effect>
+                  <SepiaTone level="0.53">
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </SepiaTone>
+               </effect>
+            </Rectangle>
+            <ListView fx:id="llstPlaylist" focusTraversable="false" layoutX="185.0" layoutY="120.0" prefHeight="253.0" prefWidth="615.0" style="-fx-cursor: hand; -fx-background-color: #a0e1bb; -fx-background-radius: 2em;">
+               <effect>
+                  <InnerShadow choke="0.34" color="#2b2f0b" height="72.11" radius="43.1025" width="102.3">
+                     <input>
+                        <SepiaTone level="0.66" />
+                     </input></InnerShadow>
+               </effect>
+            </ListView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1fff98" height="50.0" layoutX="582.0" layoutY="549.0" stroke="BLACK" strokeType="INSIDE" width="286.0">
+               <effect>
+                  <SepiaTone>
+                     <input>
+                        <InnerShadow choke="0.52" color="#2e945c" height="30.11" radius="19.1075" width="48.32" />
+                     </input>
+                  </SepiaTone>
+               </effect>
+            </Rectangle>
+            <Button fx:id="btnMinimizar" layoutX="889.0" layoutY="17.0" maxHeight="39.0" maxWidth="45.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" style="-fx-background-radius: 12em; -fx-background-color: yellow; -fx-max-height: 20; -fx-max-width: 20; -fx-min-height: 20; -fx-min-width: 20;">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblTempoMsg" layoutX="590.0" layoutY="565.0" text="Tempo Total">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="lblTempo" layoutX="675.0" layoutY="565.0" text="0:00">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="lblStatus" layoutX="691.0" layoutY="588.0" text="Label">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblContador" layoutX="751.0" layoutY="559.0" prefHeight="30.0" prefWidth="128.0" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Slider fx:id="sldMusica" blockIncrement="1.0" layoutX="95.0" layoutY="534.0" majorTickUnit="1.0" minorTickCount="0" prefHeight="15.0" prefWidth="786.0" style="-fx-cursor: hand; -fx-border-radius: 12em;">
+               <effect>
+                  <InnerShadow choke="0.43" color="#a15e45" height="98.41" radius="55.155" width="124.21">
+                     <input>
+                        <DropShadow />
+                     </input></InnerShadow>
+               </effect></Slider>
+            <Label fx:id="lblPlaylist" layoutX="401.0" layoutY="85.0" prefHeight="17.0" prefWidth="203.0" text="Label" />
+            <Button fx:id="btnAbrir" layoutX="26.0" layoutY="35.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" style="-fx-background-radius: 3em; -fx-cursor: hand;">
+               <effect>
+                  <InnerShadow radius="21.86" width="68.44" />
+               </effect>
+            </Button>
+            <Label fx:id="lblZeta" layoutX="402.0" layoutY="232.0" prefHeight="30.0" prefWidth="228.0" text="Sasply- Beta v 0.6">
+               <font>
+                  <Font name="Times New Roman Bold" size="25.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startY="0.22380952380952382">
+                     <stops>
+                        <Stop color="#0f0746" />
+                        <Stop color="#e14e4e" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" />
+               </effect>
+            </Label>
          </children>
-         <effect>
-            <SepiaTone level="0.48" />
-         </effect>
       </Pane>
    </children>
 </StackPane>
